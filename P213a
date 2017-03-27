@@ -1,0 +1,41 @@
+import java.util.Scanner; 
+import java.io.*;
+
+public class P213a {  
+      public static void main ( String [] args ) {
+            Scanner inFile = null;
+            try { inFile = new Scanner(new File("213a.dat")); }
+            catch (FileNotFoundException e) { System.out.println("ERROR:File Not Found");
+                                              System.exit(0); }
+            //DECLARE AND INITIALIZE VARIABLES
+              while (inFile.hasnext())
+                    {
+                    //RESET VALUES
+                    System.out.print("Hours worked : ");
+                    for (int count = 1; count <= 7; count++)
+                    {hr = inFile.nextInt();
+                    System.out.print(hr + " ");
+                    if (hr <= 8) { day$ = 30*hr);
+                                    weekly$ += day$;
+                                    weeklyhr += hr; }
+                    else { day$ = (hr%8) * 28.8 + (30*hr);
+                            weekly$ += day$;
+                            weeklyhr += hr;}} // END OF WHILECOUNT = 7 at End
+              if (weeklyHr > 48)
+              {weekly$ += (weeklyHr%48) * 15.0;}
+              week++;
+              System.out.println("Week " + week + " : " + dollar.format(weekly$) + "\n\n");
+              
+              /*
+              SATURDAY BONUS
+              
+              if (count = 6){ day$ += (day$ * 1.25);
+                              weekly$ += day$;}
+                              
+              SUNDAY BONUS
+              
+              if (count = 7){ day$ = (day$ * 0.5);
+                              weekly$ += day$; }
+              */
+              
+                   
